@@ -1,12 +1,27 @@
-﻿using System;
+﻿using System.IO.Ports;
+using System;
 
 namespace GPSReceiver
 {
-    class Program
+    public static class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            using SerialPort port = new SerialPort("COM7", 9600)
+            {
+                DataBits = 8,
+                Parity = Parity.None,
+                StopBits = StopBits.One,
+            };
+
+            port.Open();
+
+            while (port.IsOpen)
+            {
+                string str = port.ReadExisting();
+
+                Console.WriteLine(str);
+            }
         }
     }
 }
