@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GPSReceiver", "GPSReceiver.csproj", "{4E4AC20B-BFA6-4A97-B7AE-2C6D048460DC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{4E4AC20B-BFA6-4A97-B7AE-2C6D048460DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E4AC20B-BFA6-4A97-B7AE-2C6D048460DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E4AC20B-BFA6-4A97-B7AE-2C6D048460DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E4AC20B-BFA6-4A97-B7AE-2C6D048460DC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {1CDC835D-2E95-4B28-9E68-9ED23A45B13E}
+	EndGlobalSection
+EndGlobal
