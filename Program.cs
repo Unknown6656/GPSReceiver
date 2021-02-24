@@ -1,27 +1,13 @@
-﻿using System.IO.Ports;
+﻿using GPSReceiver;
 using System;
 
-namespace GPSReceiver
-{
-    public static class Program
-    {
-        public static void Main(string[] args)
-        {
-            using SerialPort port = new SerialPort("COM7", 9600)
-            {
-                DataBits = 8,
-                Parity = Parity.None,
-                StopBits = StopBits.One,
-            };
 
-            port.Open();
+using GPSSensor gps = new();
 
-            while (port.IsOpen)
-            {
-                string str = port.ReadExisting();
+gps.Start("COM7");
 
-                Console.WriteLine(str);
-            }
-        }
-    }
-}
+
+Console.WriteLine("Press any key to stop.");
+Console.ReadKey(true);
+
+gps.Stop();
