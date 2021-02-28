@@ -7,6 +7,11 @@
         <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     </PropertyGroup>
     <ItemGroup>
+      <Compile Remove="old\**" />
+      <EmbeddedResource Remove="old\**" />
+      <None Remove="old\**" />
+    </ItemGroup>
+    <ItemGroup>
       <PackageReference Include="System.IO.Ports" Version="6.0.0-preview.1.21102.12" />
       <PackageReference Include="Unknown6656.Core" Version="1.0.18" />
     </ItemGroup>
