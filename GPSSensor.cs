@@ -10,6 +10,8 @@ namespace GPSReceiver
     public sealed class GPSSensor
         : IDisposable
     {
+        public static string[] AvailablePortNames => SerialPort.GetPortNames();
+
         public bool IsDisposed { get; private set; }
         public bool IsInUse { get; private set; }
 
@@ -20,6 +22,7 @@ namespace GPSReceiver
         public event Action<GPSSensor, SerialError>? OnError;
         public event Action<GPSSensor>? OnStart;
         public event Action<GPSSensor>? OnStop;
+        public event Action<GPSSensor, string>? OnRawDataReceived;
         public event Action<GPSSensor, NMEA0183Data>? OnValidDataReceived;
         public event Action<GPSSensor, NMEA0183Error, string>? OnInvalidDataReceived;
 
@@ -39,6 +42,9 @@ namespace GPSReceiver
                     if (IsInUse && _port is { IsOpen: true } p)
                     {
                         string message = p.ReadLine();
+
+                        OnRawDataReceived?.Invoke(this, message);
+
                         Union<NMEA0183Data, NMEA0183Error> result = ProcessNMEA0183(message);
 
                         if (result.Is(out NMEA0183Data? data))
