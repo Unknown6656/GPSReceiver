@@ -2,8 +2,6 @@
 using System;
 
 
-
-
 using GPSSensor gps = new();
 
 gps.OnValidDataReceived += (_, d) =>
