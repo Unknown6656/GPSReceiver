@@ -1,4 +1,4 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
         <OutputType>Exe</OutputType>
         <OutputDir>$(SolutionDir)bin</OutputDir>
@@ -18,6 +18,6 @@
     </ItemGroup>
     <ItemGroup>
       <PackageReference Include="System.IO.Ports" Version="7.0.0" />
-      <PackageReference Include="Unknown6656.Core" Version="1.1.5" />
+      <PackageReference Include="Unknown6656.Core" Version="1.1.7" />
     </ItemGroup>
 </Project>
