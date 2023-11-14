@@ -17,7 +17,7 @@
       <None Remove="old\**" />
     </ItemGroup>
     <ItemGroup>
-      <PackageReference Include="System.IO.Ports" Version="7.0.0" />
+      <PackageReference Include="System.IO.Ports" Version="8.0.0" />
       <PackageReference Include="Unknown6656.Core" Version="1.1.7" />
     </ItemGroup>
 </Project>
